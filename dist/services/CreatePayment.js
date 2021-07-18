@@ -13,32 +13,28 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const AxiosService_1 = __importDefault(require("./AxiosService"));
-class CreateKey {
+class CreatePayment {
     constructor() { }
     /**
      * @param ConfigsPagseguro
      * @param RequestParamsPagseguro
-     * @returns Promise<RequestParamsPagseguro>
+     * @returns Promise<RequestParamsPagseguro | { error:string }>
      */
     execute({ secreteKey, version = '4.0', baseUrl = 'https://sandbox.api.pagseguro.com/', }, params) {
         return __awaiter(this, void 0, void 0, function* () {
-            this.secreteKey = secreteKey;
-            this.version = version;
-            this.baseUrl = baseUrl;
             try {
                 const api = AxiosService_1.default.api({ baseUrl, secreteKey, version });
                 const response = yield api.post('charges', Object.assign({}, params));
-                const repaseParam = params;
-                repaseParam.payment_method.card = {
-                    security_code: params.payment_method.card.security_code,
-                    id: response.data.payment_method.card.id
-                };
-                return repaseParam;
+                if (response.data.status === 'DECLINED')
+                    return {
+                        error: response.data.payment_response
+                    };
+                return response.data;
             }
             catch (error) {
-                return error.response.data.error_messages;
+                return error.payment_response;
             }
         });
     }
 }
-exports.default = CreateKey;
+exports.default = CreatePayment;

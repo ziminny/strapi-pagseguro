@@ -1,9 +1,27 @@
+import { AxiosInstance } from "axios";
 export interface ConfigsPagseguro {
-    baseUrl: string;
+    /**
+     *  Url pagseguro
+     *  @type string
+     */
+    baseUrl?: string;
+    /**
+     *  Chave secreta
+     *  @type string
+     */
     secreteKey: string;
-    version: string;
+    /**
+     *  Versão do pagseguro
+     *  @type string
+     *  @default 4.0
+     */
+    version?: string;
 }
 declare class AxiosService {
-    static api({ secreteKey, baseUrl, version }: ConfigsPagseguro): import("axios").AxiosInstance;
+    /**
+     * @param ConfigsPagseguro
+     * @returns AxiosInstance
+     */
+    static api({ secreteKey, baseUrl, version }: ConfigsPagseguro): AxiosInstance;
 }
 export default AxiosService;
