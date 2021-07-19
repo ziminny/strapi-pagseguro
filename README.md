@@ -77,6 +77,8 @@ app.listen(3000,() =>  console.log( 'Server Up' ) )
 
 ## Requisição
 
+### Um exemplo do tipo esperado 
+
 ~~~json
 {
   "reference_id" : "ex-00001",
@@ -100,5 +102,66 @@ app.listen(3000,() =>  console.log( 'Server Up' ) )
       }
     }
   }
+}
+~~~
+
+## Resposta
+
+### Tipo de resposta
+
+~~~json
+{
+  "id": "CHAR_0B849515-F169-4B23-ADD5-0FAE432D280E",
+  "reference_id": "ex-00001",
+  "status": "PAID",
+  "created_at": "2021-07-19T20:21:05.274-03:00",
+  "paid_at": "2021-07-19T20:21:06.747-03:00",
+  "description": "Motivo da cobrança",
+  "amount": {
+    "value": 1000,
+    "currency": "BRL",
+    "summary": {
+      "total": 1000,
+      "paid": 1000,
+      "refunded": 0
+    }
+  },
+  "payment_response": {
+    "code": "20000",
+    "message": "SUCESSO",
+    "reference": "1626736866747"
+  },
+  "payment_method": {
+    "type": "CREDIT_CARD",
+    "installments": 1,
+    "capture": true,
+    "card": {
+      "id": "CARD_DA7EE050-3927-41DB-B287-34A46D9C6ECC",
+      "brand": "visa",
+      "first_digits": "411111",
+      "last_digits": "1111",
+      "exp_month": "3",
+      "exp_year": "2026",
+      "holder": {
+        "name": "Jose da Silva"
+      }
+    },
+    "soft_descriptor": "sellervirtual"
+  },
+  "notification_urls": [],
+  "links": [
+    {
+      "rel": "SELF",
+      "href": "https://sandbox.api.pagseguro.com/charges/CHAR_0B849515-F169-4B23-ADD5-0FAE432D280E",
+      "media": "application/json",
+      "type": "GET"
+    },
+    {
+      "rel": "CHARGE.CANCEL",
+      "href": "https://sandbox.api.pagseguro.com/charges/CHAR_0B849515-F169-4B23-ADD5-0FAE432D280E/cancel",
+      "media": "application/json",
+      "type": "POST"
+    }
+  ]
 }
 ~~~
