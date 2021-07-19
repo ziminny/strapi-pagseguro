@@ -49,7 +49,7 @@ app.post('/',async (req , res) => {
 app.listen(4000, () => console.log( ‘Server up port 4500’ ) )
 ~~~
 
-### TS
+<h1 style="color:'#296FBB'">TS</h1>
 import express from ‘express’
 import { generateKey , generatePayment } from ‘./index’
 import { ConfigsPagseguro } from ‘./services/AxiosService’
