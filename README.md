@@ -19,6 +19,7 @@ ou
 
 ~~~javascript
 const express = require("express")
+const {generatePayment,generateKey} = require("strapi-pagseguro")
 
 const app = express()
 app.use(express.json())
