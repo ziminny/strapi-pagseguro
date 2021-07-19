@@ -20,7 +20,7 @@ app.use(cors_1.default());
 app.use(express_1.default.json());
 app.post('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const configs = {
-        secreteKey: '9530D7E5F2974BDFA479B75C9E8CC2D5'
+        secreteKey: 'your key'
     };
     const generateKeyResponse = yield index_1.generateKey(Object.assign({}, configs), req.body);
     const generatePaymentResponse = yield index_1.generatePayment(Object.assign({}, configs), generateKeyResponse);

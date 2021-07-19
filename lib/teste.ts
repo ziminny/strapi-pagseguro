@@ -9,7 +9,7 @@ app.use(express.json())
 app.post('/',async (req , res) => {
   
   const configs:ConfigsPagseguro = {
-    secreteKey:'9530D7E5F2974BDFA479B75C9E8CC2D5'
+    secreteKey:'your key'
   } 
   
    const generateKeyResponse = await generateKey({...configs } ,req.body)
