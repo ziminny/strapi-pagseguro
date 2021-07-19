@@ -49,7 +49,7 @@ app.post('/',async (req , res) => {
 app.listen(4000, () => console.log( ‘Server up port 4500’ ) )
 ~~~
 
-<span style="color:blue">TS</span>
+### TS
 ~~~typescript
 import express from ‘express’
 import { generateKey , generatePayment } from ‘./index’
@@ -73,4 +73,32 @@ app.post('/' , async ( req , res ) => {
 })
 
 app.listen(3000,() =>  console.log( 'Server Up' ) )
+~~~
+
+## Requisição
+
+~~~json
+{
+  "reference_id" : "ex-00001",
+  "description": "Motivo da cobrança",
+  "amount": {
+    "value": 20000,
+    "currency": "BRL"
+  },
+  "payment_method": {
+    "type": "CREDIT_CARD",
+    "installments": 1,
+    "capture": true,
+    "card": {
+      "number": "4111111111111111",
+      "exp_month": "03",
+      "exp_year": "2026",
+      "security_code": "123",
+      "store": true,        
+      "holder": {
+        "name": "Jose da Silva"
+      }
+    }
+  }
+}
 ~~~
