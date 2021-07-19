@@ -1,1 +1,2 @@
 # strapi-pagseguro
+### Em desenvolvimento
