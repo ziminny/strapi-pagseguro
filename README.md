@@ -6,9 +6,9 @@
 
 ## Instalação
 
-`bash
+~~~bash
  yarn add strapi-pagseguro
-`
+~~~
 ou
 
 ~~~bash
