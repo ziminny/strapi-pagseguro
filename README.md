@@ -1,2 +1,1 @@
-# strapi-pagseguro
-### Em desenvolvimento
+![alt text](http://url/to/img.png)
