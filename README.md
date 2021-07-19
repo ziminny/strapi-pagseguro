@@ -11,13 +11,13 @@
 `
 ou
 
-`bash
+´bash
   npm -i strapi-pagseguro
-`
+´
 
 ##Iniciando
 
-`jsvascript
+´jsvascript
 const express = require("express")
 
 const app = express()
@@ -34,5 +34,5 @@ app.post('/',async (req , res) => {
 })
 
 app.listen(4500, () => console.log("Server up port 4500"))
-`
+´
 
