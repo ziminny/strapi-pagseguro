@@ -46,7 +46,7 @@ app.post('/',async (req , res) => {
    return res.json(generatePaymentResponse)
 })
 
-app.listen(4000, () => console.log( ‘Server up port 4500’ ) )
+app.listen(4000, () => console.log( 'Server up' ) )
 ~~~
 
 ### TS
