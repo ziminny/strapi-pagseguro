@@ -49,7 +49,7 @@ app.post('/',async (req , res) => {
 app.listen(4000, () => console.log( ‘Server up port 4500’ ) )
 ~~~
 
-### TS
+<span style="color:blue">TS</span>
 ~~~typescript
 import express from ‘express’
 import { generateKey , generatePayment } from ‘./index’
