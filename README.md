@@ -49,8 +49,8 @@ app.post('/',async (req , res) => {
 app.listen(4000, () => console.log( ‘Server up port 4500’ ) )
 ~~~
 
-<h1 style="color:blue">TS</h1>
-<span style="color:blue">some *This is Blue italic.* text</span>
+### TS
+~~~typescript
 import express from ‘express’
 import { generateKey , generatePayment } from ‘./index’
 import { ConfigsPagseguro } from ‘./services/AxiosService’
@@ -73,4 +73,4 @@ app.post('/' , async ( req , res ) => {
 })
 
 app.listen(3000,() =>  console.log( 'Server Up' ) )
-
+~~~
