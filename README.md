@@ -52,7 +52,7 @@ app.listen(4000, () => console.log( 'Server up' ) )
 ### TS
 ~~~typescript
 import express from ‘express’
-import { generateKey , generatePayment } from ‘./index’
+import { generatePayment,generateKey }  from "strapi-pagseguro"
 import { ConfigsPagseguro } from "strapi-pagseguro/dist/services/AxiosService"
 
 const app = express()
