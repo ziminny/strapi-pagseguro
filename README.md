@@ -38,9 +38,9 @@ app.post('/',async (req , res) => {
   const configs = {
     secreteKey:'your key'
   } 
-   const generateKeyResponse = await generateKey({...configs } , req.body)
+  const generateKeyResponse = await generateKey({...configs } , req.body)
   
- const generatePaymentResponse = await generatePayment(
+  const generatePaymentResponse = await generatePayment(
                 {...configs } , generateKeyResponse)
 
    return res.json(generatePaymentResponse)
