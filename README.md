@@ -19,7 +19,7 @@ https://dev.pagseguro.uol.com.br/v4.0/docs
 ou
 
 ~~~bash
-  npm -i strapi-pagseguro
+  npm i strapi-pagseguro
 ~~~
 
 ## Iniciando
