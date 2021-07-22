@@ -43,7 +43,7 @@ app.post('/',async (req , res) => {
   const generatePaymentResponse = await generatePayment(
                 {...configs } , generateKeyResponse)
 
-   return res.json(generatePaymentResponse)
+  return res.json(generatePaymentResponse)
 })
 
 app.listen(4000, () => console.log( 'Server up' ) )
@@ -60,9 +60,9 @@ const app = express()
 app.use(express.json())
 app.post('/' , async ( req , res ) => {
   
-  const configs: ConfigsPagseguro = {
+   const configs: ConfigsPagseguro = {
     secreteKey: 'your key'
-  } 
+   } 
   
    const generateKeyResponse = await generateKey({...configs } , req.body)
 

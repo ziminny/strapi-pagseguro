@@ -7,7 +7,7 @@ const app = express()
 app.use(express.json())
 app.post('/',async (req , res) => {
   
-  const configs:ConfigsPagseguro = {
+   const configs:ConfigsPagseguro = {
     secreteKey:'your key'
   } 
   
