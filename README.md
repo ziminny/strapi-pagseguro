@@ -36,7 +36,7 @@ app.use(express.json())
 app.post('/',async (req , res) => {
   
   const configs = {
-    secreteKey:'your key'
+    secretKey:'your key'
   } 
   const generateKeyResponse = await generateKey({...configs } , req.body)
   
@@ -61,7 +61,7 @@ app.use(express.json())
 app.post('/' , async ( req , res ) => {
   
    const configs: ConfigsPagseguro = {
-    secreteKey: 'your key'
+    secretKey: 'your key'
    } 
   
    const generateKeyResponse = await generateKey({...configs } , req.body)

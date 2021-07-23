@@ -12,7 +12,7 @@ export interface ConfigsPagseguro {
    *  Chave secreta
    *  @type string
    */
-  secreteKey:string
+  secretKey:string
 
   /**
    *  Versão do pagseguro 
@@ -29,7 +29,7 @@ class AxiosService {
      * @returns AxiosInstance
      */
     public static api({ 
-      secreteKey,
+      secretKey,
       baseUrl,
       version 
     }:ConfigsPagseguro) :AxiosInstance
@@ -37,7 +37,7 @@ class AxiosService {
       return axios.create( {
         baseURL:baseUrl,
         headers: {
-          Authorization:secreteKey,
+          Authorization:secretKey,
           'Content-Type' : 'application/json',
           'x-api-version':version
         }

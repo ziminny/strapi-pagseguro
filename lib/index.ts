@@ -10,12 +10,12 @@ import CreatePayment from "./services/CreatePayment"
  */
 export const generateKey = async (
   {
-    secreteKey,
+    secretKey,
     version,
     baseUrl
   }:ConfigsPagseguro,
   params:RequestParamsPagseguro
-  ) => await new CreateKey().execute({secreteKey,version,baseUrl},params)
+  ) => await new CreateKey().execute({secretKey,version,baseUrl},params)
 
 
 /** 
@@ -25,9 +25,9 @@ export const generateKey = async (
  */
   export const generatePayment = async (
     {
-      secreteKey,
+      secretKey,
       version,
       baseUrl
     }:ConfigsPagseguro,
     params:RequestParamsPagseguro
-    ) => await new CreatePayment().execute({secreteKey,version,baseUrl},params)
+    ) => await new CreatePayment().execute({secretKey,version,baseUrl},params)
